@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usabilidad y Diseño Web Centrado en el Usuario</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #ffffff;
+      --text: #2b2b2b;
+      --muted: #666666;
+      --primary: #d62828;
+      --primary-dark: #a4161a;
+      --border: #f0d0d0;
+      --accent: #ffe5e5;
+      --shadow: 0 10px 30px rgba(31, 42, 68, 0.08);
+      --max: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #5c8eff);
+      color: white;
+      padding: 48px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      max-width: var(--max);
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 14px 16px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      background: var(--accent);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 28px auto;
+      padding: 0 18px 40px;
+    }
+
+    .intro, section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      margin: 18px 0 10px;
+      color: var(--text);
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin: 10px 0 14px 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      background: #fbfcff;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px 20px 40px;
+      font-size: 0.95rem;
+    }
+
+    .top-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      font-size: 1.2rem;
+      display: none;
+    }
+
+    .references li {
+      word-break: break-word;
+    }
+
+    @media (max-width: 640px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+      }
+
+      .intro, section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="inicio">
+    <h1>Usabilidad y Diseño Web Centrado en el Usuario</h1>
+    <p>
+      Sitio web académico sobre conceptos fundamentales de usabilidad, accesibilidad,
+      ingeniería de usabilidad, evaluación y diseño centrado en el usuario.
+    </p>
+  </header>
+
+  <nav>
+    <div class="nav-wrap">
+      <a href="#usabilidad">Usabilidad</a>
+      <a href="#accesibilidad">Accesibilidad</a>
+      <a href="#ingenieria">Ingeniería</a>
+      <a href="#ciclo">Ciclo de vida</a>
+      <a href="#metodos">Evaluación</a>
+      <a href="#dcu">Diseño centrado</a>
+      <a href="#referencias">Referencias</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="intro">
+      <h2>Presentación</h2>
+      <p>
+        La usabilidad es una cualidad esencial en el desarrollo de productos digitales, ya que busca
+        que los sistemas sean fáciles de aprender, eficientes, claros y satisfactorios para quienes los utilizan.
+        En el ámbito web, aplicar principios de usabilidad mejora la experiencia del usuario y facilita el acceso a la información.
+      </p>
+      <p>
+        Este sitio reúne los principales conceptos que todo estudiante o profesional debe conocer para comprender
+        cómo diseñar interfaces orientadas a las necesidades reales de las personas.
+      </p>
+    </section>
+
+    <section id="usabilidad">
+      <h2>1. Usabilidad: nociones básicas para los profesionales de la información</h2>
+      <p>
+        La usabilidad es el grado en que un producto puede ser utilizado por usuarios específicos para alcanzar objetivos
+        concretos con eficacia, eficiencia y satisfacción dentro de un contexto de uso determinado.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <div class="tag">Eficacia</div>
+          <p>Capacidad del usuario para cumplir correctamente una tarea o meta.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Eficiencia</div>
+          <p>Recursos y tiempo que necesita el usuario para completar una tarea.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Satisfacción</div>
+          <p>Percepción positiva del usuario al interactuar con el sistema.</p>
+        </div>
+      </div>
+      <h3>Importancia</h3>
+      <ul>
+        <li>Facilita la localización y comprensión de la información.</li>
+        <li>Disminuye errores de navegación e interacción.</li>
+        <li>Mejora la calidad del servicio digital.</li>
+        <li>Favorece la permanencia y confianza del usuario.</li>
+      </ul>
+    </section>
+
+    <section id="accesibilidad">
+      <h2>2. Usabilidad y accesibilidad</h2>
+      <p>
+        Aunque están relacionadas, no son exactamente lo mismo. La usabilidad se centra en que el sistema sea fácil de usar;
+        la accesibilidad busca que todas las personas, incluidas aquellas con discapacidad, puedan acceder y utilizar el sistema.
+      </p>
+      <h3>Diferencias principales</h3>
+      <ul>
+        <li><strong>Usabilidad:</strong> facilidad de uso, aprendizaje, eficiencia y satisfacción.</li>
+        <li><strong>Accesibilidad:</strong> acceso equitativo mediante lectores de pantalla, contraste adecuado, navegación con teclado y contenido comprensible.</li>
+      </ul>
+      <h3>Relación entre ambas</h3>
+      <p>
+        Un sitio ideal debe ser usable y accesible a la vez. Si una página es bonita pero una persona no puede leerla o navegarla,
+        entonces no cumple su función social ni técnica.
+      </p>
+    </section>
+
+    <section id="ingenieria">
+      <h2>3. Ingeniería de usabilidad</h2>
+      <p>
+        La ingeniería de usabilidad es una disciplina que integra métodos, técnicas y herramientas para asegurar
+        que un sistema interactivo responda a las necesidades del usuario durante todo el proceso de desarrollo.
+      </p>
+      <h3>Objetivos</h3>
+      <ul>
+        <li>Identificar necesidades y características de los usuarios.</li>
+        <li>Definir requisitos de uso.</li>
+        <li>Diseñar prototipos y soluciones iterativas.</li>
+        <li>Evaluar y mejorar el producto continuamente.</li>
+      </ul>
+      <p>
+        Esta disciplina combina conocimientos de diseño, informática, psicología cognitiva y experiencia de usuario.
+      </p>
+    </section>
+
+    <section id="ciclo">
+      <h2>4. Ciclo de vida de la ingeniería de usabilidad</h2>
+      <p>
+        El ciclo de vida de la ingeniería de usabilidad describe las etapas por las que pasa un producto digital
+        desde su planificación hasta su evaluación final.
+      </p>
+      <div class="cards">
+        <div class="card"><strong>1. Análisis</strong><p>Se estudian usuarios, contexto, necesidades y tareas.</p></div>
+        <div class="card"><strong>2. Diseño</strong><p>Se estructura la interfaz y se organizan contenidos y flujos.</p></div>
+        <div class="card"><strong>3. Prototipado</strong><p>Se crean versiones preliminares para validar ideas.</p></div>
+        <div class="card"><strong>4. Evaluación</strong><p>Se aplican pruebas para identificar problemas de uso.</p></div>
+        <div class="card"><strong>5. Implementación</strong><p>Se desarrolla la versión funcional del sistema.</p></div>
+        <div class="card"><strong>6. Mejora continua</strong><p>Se realizan ajustes a partir de retroalimentación real.</p></div>
+      </div>
+    </section>
+
+    <section id="metodos">
+      <h2>5. Métodos de evaluación de usabilidad</h2>
+      <p>
+        Evaluar la usabilidad permite detectar dificultades antes de que afecten a los usuarios finales.
+      </p>
+      <h3>Métodos más utilizados</h3>
+      <ul>
+        <li><strong>Pruebas con usuarios:</strong> observación directa mientras realizan tareas específicas.</li>
+        <li><strong>Evaluación heurística:</strong> revisión de la interfaz por expertos según principios de usabilidad.</li>
+        <li><strong>Entrevistas y encuestas:</strong> recopilación de opiniones y experiencias.</li>
+        <li><strong>Recorrido cognitivo:</strong> análisis paso a paso de la facilidad de aprendizaje.</li>
+        <li><strong>Pruebas A/B:</strong> comparación entre dos diseños para medir cuál funciona mejor.</li>
+      </ul>
+      <p>
+        La combinación de métodos ofrece una visión más completa del desempeño del sistema.
+      </p>
+    </section>
+
+    <section id="dcu">
+      <h2>6. Diseño web centrado en el usuario</h2>
+      <p>
+        El diseño centrado en el usuario es un enfoque en el que las decisiones de diseño se toman considerando
+        las necesidades, limitaciones, expectativas y comportamientos de los usuarios reales.
+      </p>
+      <h3>Principios del diseño centrado en el usuario</h3>
+      <ul>
+        <li>Comprender quién usará el sitio.</li>
+        <li>Diseñar con base en tareas reales.</li>
+        <li>Validar mediante pruebas y retroalimentación.</li>
+        <li>Mejorar de forma iterativa.</li>
+      </ul>
+      <h3>Cómo se refleja en este sitio</h3>
+      <ul>
+        <li>Navegación clara y visible.</li>
+        <li>Secciones organizadas por temas.</li>
+        <li>Contraste adecuado de colores.</li>
+        <li>Texto legible y estructura simple.</li>
+        <li>Diseño adaptable a celular y computadora.</li>
+      </ul>
+    </section>
+
+    <section id="referencias">
+      <h2>7. Referencias bibliográficas</h2>
+      <ul class="references">
+        <li>ISO 9241-11. Ergonomics of human-system interaction — Usability: Definitions and concepts.</li>
+        <li>Jakob Nielsen. Usability Engineering. Academic Press, 1993.</li>
+        <li>Ben Shneiderman et al. Designing the User Interface: Strategies for Effective Human-Computer Interaction.</li>
+        <li>Jennifer Preece, Yvonne Rogers y Helen Sharp. Interaction Design: Beyond Human-Computer Interaction.</li>
+        <li>Deborah J. Mayhew. The Usability Engineering Lifecycle.</li>
+        <li>Don Norman. The Design of Everyday Things.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Trabajo académico sobre usabilidad, accesibilidad y diseño web centrado en el usuario.</p>
+  </footer>
+
+  <button class="top-btn" id="topBtn" aria-label="Volver arriba">↑</button>
+
+  <script>
+    const topBtn = document.getElementById('topBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        topBtn.style.display = 'block';
+      } else {
+        topBtn.style.display = 'none';
+      }
+    });
+
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
